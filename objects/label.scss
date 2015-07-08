@@ -1,0 +1,41 @@
+/**
+ * Labels and badges for simplistic information.
+ *
+ * Labels are small indicators that give descriptions and additional information
+ * to sections of content. Label font-size will always be smaller than their
+ * parents, allowing for easier inline integration.
+ *
+ * @example
+ *   <h2>Headline <span class="label">New</span></h2>
+ *
+ */
+.label {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  padding: 0.275rem 0.425rem;
+  font-size: 0.7rem;
+  line-height: 100%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: $grey;
+  border-radius: 2px;
+
+  &:empty {
+    display: none;
+  }
+
+  &::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    content: "";
+  }
+}
+
+
+.label--badge {
+  border-radius: 1rem;
+}
